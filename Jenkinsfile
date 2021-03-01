@@ -14,7 +14,8 @@ pipeline {
         }
     stage('Code Analysis') {
             steps {
-                sh '/usr/local/bin/sl analyze --app GoLangShiftLeft'
+                sh '/usr/local/bin/sl analyze --app GoLangShiftLeft --go --cpg ./...'
+               
             }
        }
     }
